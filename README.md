@@ -1,146 +1,116 @@
-# 📅 Weekly Meeting Availability Table
+# 🌆 City Skyline
 
-A responsive **Weekly Meeting Availability Table** built with **HTML and CSS** as part of the FreeCodeCamp curriculum.
+A responsive **City Skyline** built with **HTML and CSS** as part of the FreeCodeCamp curriculum.
 
-The project displays the availability of people for meetings throughout the week using a color-coded table. Different colors represent different availability levels, while borders distinguish between different types of time rows.
+The project uses CSS gradients, flexbox, CSS variables, and media queries to create a stylized city skyline with background and foreground buildings.
 
 ## 📸 Project Overview
 
-The table shows meeting availability for different days and times during the week.
-
-Each availability level is represented by a different color, making it easy to identify when more or fewer people are available.
+The page displays a colorful city skyline during the day and automatically changes to a darker nighttime-style appearance on smaller screens.
 
 ### ✨ Features
 
-* 📅 Weekly meeting schedule
-* ⏰ Time-based availability
-* 🎨 Color-coded availability levels from `0` to `5+`
-* 📊 Semantic HTML table structure
-* ♿ Accessible `aria-label` attributes
-* 🎨 CSS custom properties for colors and borders
-* ➖ Solid and dashed borders for different rows
-* 🌈 Gradient-based availability legend
-* 📱 Responsive design
+* 🌇 Responsive city skyline design
+* 🏢 Background and foreground buildings
+* 🎨 CSS custom properties (variables) for colors
+* 🌈 Linear and radial gradients
+* 🪟 CSS-generated windows
+* 📱 Responsive design using media queries
+* 💻 Built entirely with HTML and CSS
+* 🎯 No JavaScript required
 
 ## 🛠️ Technologies Used
 
 * **HTML5**
 * **CSS3**
 * CSS Variables
-* CSS Linear Gradients
-* HTML Tables
-* Accessibility Attributes
-* Responsive Design
+* Flexbox
+* Linear Gradients
+* Radial Gradients
+* Repeating Gradients
+* Media Queries
 
 ## 📂 Project Structure
 
 ```text
-Availability-Table/
+City-Skyline/
 │
 ├── index.html
 ├── styles.css
 └── README.md
 ```
 
-## 🎨 Availability Levels
+## 🎨 CSS Concepts
 
-The table uses six availability levels:
+This project demonstrates several important CSS concepts:
 
-| Class         | Meaning      |
-| ------------- | ------------ |
-| `available-0` | 0 available  |
-| `available-1` | 1 available  |
-| `available-2` | 2 available  |
-| `available-3` | 3 available  |
-| `available-4` | 4 available  |
-| `available-5` | 5+ available |
+### CSS Variables
 
-Each level has its own CSS variable:
+Building and window colors are stored as reusable variables:
 
 ```css
 :root {
-  --color0: #f4cccc;
-  --color1: #f6b26b;
-  --color2: #ffe599;
-  --color3: #b6d7a8;
-  --color4: #76a5af;
-  --color5: #6fa8dc;
-
-  --solid-border: 2px solid;
-  --dashed-border: 2px dashed;
+  --building-color1: #aa80ff;
+  --building-color2: #66cc99;
+  --building-color3: #cc6699;
+  --building-color4: #538cc6;
 }
 ```
 
-## 🌈 Availability Legend
+### Gradients
 
-The project includes a legend that visually represents the availability range from `0` to `5+`.
+Different gradient types are used to create the sky, buildings, and windows:
 
-```html
-<div id="legend">
-  <span>Availability</span>
-  <div id="legend-gradient"></div>
-</div>
+```css
+background: radial-gradient(...);
 ```
 
-The gradient uses hard color transitions between each availability level.
+and:
 
-## ♿ Accessibility
-
-The table uses semantic HTML elements such as:
-
-* `<table>`
-* `<caption>`
-* `<th>`
-* `<td>`
-
-Table headers also use the appropriate `scope` attributes:
-
-```html
-<th scope="col">Monday</th>
+```css
+background: repeating-linear-gradient(...);
 ```
 
-Time headers use:
+### Responsive Design
 
-```html
-<th class="time" scope="row">9:00 AM</th>
+A media query changes the skyline colors when the screen width is smaller than `1000px`:
+
+```css
+@media (max-width: 1000px) {
+  ...
+}
 ```
 
-Availability cells include descriptive `aria-label` attributes:
-
-```html
-<td class="available-3" aria-label="3 available"></td>
-```
-
-This makes the availability information more accessible to users who rely on assistive technologies.
+This creates a darker appearance for smaller screens.
 
 ## 🚀 How to Run
 
-1. Clone the repository:
+1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/availability-table.git
+git clone https://github.com/your-username/city-skyline.git
 ```
 
 2. Open the project folder.
 
 3. Open `index.html` in your browser.
 
-No additional dependencies are required.
+No additional dependencies or installations are required.
 
-## 🎓 Learning Objectives
+## 🎓 Learning Purpose
 
-This project helped me practice:
+This project was created as a practice project while learning **HTML and CSS** through the **FreeCodeCamp Responsive Web Design curriculum**.
 
-* Creating accessible HTML tables
-* Using table headers and captions
-* Working with `scope` attributes
-* Using CSS custom properties
-* Creating color-coded data
-* Working with CSS gradients
-* Creating hard transitions in gradients
-* Styling elements based on parent classes
-* Using `aria-label` for accessibility
-* Building responsive layouts
+It helped me practice:
+
+* Structuring webpages with HTML
+* Creating layouts with Flexbox
+* Using CSS variables
+* Creating shapes with CSS borders
+* Working with gradients
+* Building responsive designs
+* Using media queries
 
 
-This project was created for educational and learning purposes as part of the FreeCodeCamp curriculum.
+
+This project is created for educational and learning purposes.
